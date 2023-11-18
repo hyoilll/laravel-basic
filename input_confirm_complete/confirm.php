@@ -8,9 +8,10 @@
 <body>
     <?php
         require "./validation.php";
+
         // check validation
         $errors = validation($_POST);
-        if (isset($errors)){
+        if (count($errors) > 0){
             foreach($errors as $err){
                 echo $err. "<br />";
             }
@@ -85,6 +86,7 @@
         <input type="hidden" name="url" value="<?php echo htmlspecialchars($_POST["url"]); ?>" />
         <input type="hidden" name="sex" value="<?php echo htmlspecialchars($_POST["sex"]); ?>" />
         <input type="hidden" name="age" value="<?php echo $user_age ?>" />
+        <input type="hidden" name="age_orl" value="<?php echo htmlspecialchars($_POST["age"]); ?>" />
         <input type="hidden" name="contact" value="<?php echo htmlspecialchars($_POST["contact"]); ?>" />
         <input type="submit" value="送信"/>
     </form>
