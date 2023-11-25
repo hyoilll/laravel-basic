@@ -1,0 +1,17 @@
+{
+  "name": "hyoil/composer_test",
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "hyoil Lee",
+      "email": "dlgydlf123@gmail.com"
+    }
+  ],
+  "require": {
+    "nesbot/carbon": "^2.71"
+  }
+}
