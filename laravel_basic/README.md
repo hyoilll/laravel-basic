@@ -68,3 +68,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## debug bar
 
 composer require barryvdh/laravel-debugbar:^{version}
+
+## connection database
+
+<!-- 以下のコマンドを叩くことで、接続したデータベースに幾つのテーブルを生成してくれる。 -->
+
+php artisan migrate
