@@ -113,3 +113,11 @@ php artisan make:model {name}
     app/Http/Controllers
 -   view
     resources/views
+
+## req -> routing -> controller -> model -> view, cycle
+
+-   client req
+-   routing
+-   controller
+    get data from DB (with Model)
+-   view
