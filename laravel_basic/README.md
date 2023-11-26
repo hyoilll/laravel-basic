@@ -103,3 +103,13 @@ php artisan make:model {name}
 
 -   対話型コマンド入力でデータ保存・観覧できる。（shell 上で行われる。）
 -   php artisan tinker
+
+## client request -> routing -> controller -> view, cycle
+
+-   client request
+-   routing
+    routes/web.php
+-   controller
+    app/Http/Controllers
+-   view
+    resources/views
