@@ -98,3 +98,8 @@ php artisan make:model {name}
 -   php artisan migrate:fresh
 <!-- ロールバックして再生成。 -->
 -   php artisan migrate:refresh
+
+## tinker (DB 簡易接続)
+
+-   対話型コマンド入力でデータ保存・観覧できる。（shell 上で行われる。）
+-   php artisan tinker
