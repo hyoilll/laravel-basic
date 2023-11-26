@@ -80,3 +80,21 @@ php artisan migrate
 <!-- {name}のEloquentモデルを生成します。これはデータベースのテーブルとの間でやり取りを行うのに使われる。 -->
 
 php artisan make:model {name}
+
+## migration (DB テーブルの履歴管理、テーブルの設定を php で書ける。)
+
+# ファイル生成
+
+<!-- ファイル生成。 -->
+
+-   php artisan make:migration {file name}
+<!-- DBに反映位する。 -->
+-   php artisan maigrate
+
+# 再生成
+
+<!-- テーブルを全て削除し、再生成する。 -->
+
+-   php artisan migrate:fresh
+<!-- ロールバックして再生成。 -->
+-   php artisan migrate:refresh
