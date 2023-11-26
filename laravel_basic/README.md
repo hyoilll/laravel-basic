@@ -74,3 +74,9 @@ composer require barryvdh/laravel-debugbar:^{version}
 <!-- 以下のコマンドを叩くことで、接続したデータベースに幾つのテーブルを生成してくれる。 -->
 
 php artisan migrate
+
+## make model
+
+<!-- {name}のEloquentモデルを生成します。これはデータベースのテーブルとの間でやり取りを行うのに使われる。 -->
+
+php artisan make:model {name}
