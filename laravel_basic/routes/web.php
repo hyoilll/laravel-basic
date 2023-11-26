@@ -18,4 +18,5 @@ Route::get('/', function () {
 });
 
 // ::classをつけることで、完全修飾として認識され、TestControllerがApp\Http\Controllers\TestControllerとして認識される。
-Route::get("tests/test", [TestController::class, "index"]);
+// Route::get("tests/test", [TestController::class, "index"]);
+Route::get("tests/test", [TestController::class, "queryBuilder"]);
