@@ -126,3 +126,10 @@ php artisan make:model {name}
 
 -   composer require laravel/breeze:^1.13 --dev
 -   php artisan breeze:install
+
+## change language (en -> ja)
+
+-   https://readouble.com/laravel/9.x/ja/auth-php.html
+-   https://readouble.com/laravel/9.x/ja/pagination-php.html
+-   https://readouble.com/laravel/9.x/ja/passwords-php.html
+-   https://readouble.com/laravel/9.x/ja/validation-php.html
