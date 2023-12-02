@@ -121,3 +121,8 @@ php artisan make:model {name}
 -   controller
     get data from DB (with Model)
 -   view
+
+## Authentication (Vite & Laravel Breeze)
+
+-   composer require laravel/breeze:^1.13 --dev
+-   php artisan breeze:install
