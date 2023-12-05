@@ -23,9 +23,10 @@ Route::get("/tests/test", [TestController::class, "index"]);
 // name()をつけると、Route情報に名前を割り当てることです。この名前は、アプリケーションの他の場所でルートを参照する際に使用されます。
 // Route::get("contacts", [ContactFormController::class, "index"])->name("contacts.index");
 // 上のRoute情報をGroupingする。
-Route::prefix("contacts")->middleware(["auth"])->controller(ContactFormController::class)->name("contacts.")->group(function(){
+Route::prefix("/contacts")->middleware(["auth"])->controller(ContactFormController::class)->name("contacts.")->group(function(){
     // middleware()　関数を利用することで、認証されたことが前提でこちらのrouteにアクセスできる。
     Route::get("/", "index")->name("index");
+    Route::get("/create", "create")->name("create");
 
 });
 
