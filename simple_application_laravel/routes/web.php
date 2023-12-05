@@ -27,6 +27,7 @@ Route::prefix("/contacts")->middleware(["auth"])->controller(ContactFormControll
     // middleware()　関数を利用することで、認証されたことが前提でこちらのrouteにアクセスできる。
     Route::get("/", "index")->name("index");
     Route::get("/create", "create")->name("create");
+    Route::post("/", "store")->name("store");
 
 });
 

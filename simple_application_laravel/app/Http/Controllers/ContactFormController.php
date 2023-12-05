@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ContactForm;
 
 class ContactFormController extends Controller
 {
@@ -27,7 +28,20 @@ class ContactFormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request, $request->name);
+
+        // Eloquentモデル
+        ContactForm::create([
+            'name' => $request->name,
+            'title' => $request->title,
+            'email' => $request->email,
+            'url' => $request->url,
+            'gender' => $request->gender,
+            'age' => $request->age,
+            'contact' => $request->contact,
+        ]);
+
+        return to_route("contacts.index"); // redirect
     }
 
     /**
