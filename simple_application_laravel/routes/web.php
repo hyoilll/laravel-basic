@@ -28,7 +28,7 @@ Route::prefix("/contacts")->middleware(["auth"])->controller(ContactFormControll
     Route::get("/", "index")->name("index");
     Route::get("/create", "create")->name("create");
     Route::post("/", "store")->name("store");
-
+    Route::get("/{id}", "show")->name("show");
 });
 
 
