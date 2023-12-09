@@ -21,6 +21,7 @@
                             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">NAME</th>
                             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">TITLE</th>
                             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">CREATED_AT</th>
+                            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">DETAIL</th>
                             <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
                         </tr>
                         </thead>
@@ -31,6 +32,9 @@
                             <td class="px-4 py-3">{{ $contact->name }}</td>
                             <td class="px-4 py-3">{{ $contact->title }}</td>
                             <td class="px-4 py-3 text-lg">{{ $contact->created_at }}</td>
+                            <td class="px-4 py-3 text-lg">
+                                <a href="{{ route('contacts.show',['id' => $contact->id]) }}" class="text-blue-500">Move</a>
+                            </td>
                             <td class="w-10 text-center">
                             </td>
                         </tr>
