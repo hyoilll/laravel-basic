@@ -16,7 +16,7 @@
                         <div class="p-2 w-full">
                         <div class="relative">
                             <label for="name" class="leading-7 text-sm text-gray-600">氏名</label>
-                            <div class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">{{ $contact->id }}</div>
+                            <div class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">{{ $contact->name }}</div>
                         </div>
                         </div>
                         <div class="p-2 w-full">
@@ -59,6 +59,11 @@
                         </div>
                         </div>
                     </div>
+                    </div>
+                    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+                        <a href="{{ route('contacts.edit',['id' => $contact->id]) }}" class="text-blue-500">
+                            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Edit</button>
+                        </a>
                     </div>
                 </div>
 
