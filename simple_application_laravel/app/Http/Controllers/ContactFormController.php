@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContactForm;
+use App\Services\CheckFormService;
 
 class ContactFormController extends Controller
 {
@@ -53,30 +54,8 @@ class ContactFormController extends Controller
     {
         $contact = ContactForm::find($id);
 
-        $gender = $contact->gender === 0 ? "Male" : "Female";
-
-        switch ($contact->age){
-            case 1:
-                $age = "~19";
-                break;
-            case 2:
-                $age = "20~29";
-                break;
-            case 3:
-                $age = "30~39";
-                break;
-            case 4:
-                $age = "40~49";
-                break;
-            case 5:
-                $age = "50~59";
-                break;
-            case 6:
-                $age = "60~";
-                break;
-            default:
-                break;
-        }
+        $gender = CheckFormService::checkGender($contact->id);
+        $age = CheckFormService::checkAge($contact->age);
 
         return view("contacts.show", compact("contact", "gender", "age"));
     }
