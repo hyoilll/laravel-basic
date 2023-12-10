@@ -60,10 +60,17 @@
                         </div>
                     </div>
                     </div>
-                    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-                        <a href="{{ route('contacts.edit',['id' => $contact->id]) }}" class="text-blue-500">
+                    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto space-x-4">
+                        <a href="{{ route('contacts.edit',['id' => $contact->id]) }}">
                             <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Edit</button>
                         </a>
+                        <form id="delete_{{ $contact->id }}" method="post" action="{{ route('contacts.destroy', ['id' => $contact->id]) }}">
+                            @csrf
+                            <!-- <a href="#" data-id="{{ $contact->id }}" onclick="deletePost(this)"> -->
+                            <a href="#" onclick="deletePost({{ $contact->id }})">
+                                <button class="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Delete</button>
+                            </a>
+                        </form>
                     </div>
                 </div>
 
@@ -72,4 +79,19 @@
             </div>
         </div>
     </div>
+    <!-- 確認メッセージ -->
+    <script>
+        // const deletePost = (e) => {
+        //     "use strict"
+        //     if(confirm("本当に削除してよろしいでしょうか？")){
+        //         document.querySelector(`delete_${e.dataset.id}`).submit()
+        //     }
+        // }
+        const deletePost = (postId) => {
+            "use strict"
+            if(confirm("本当に削除してよろしいでしょうか？")){
+                document.querySelector(`delete_${postId}`).submit()
+            }
+        }
+    </script>
 </x-app-layout>
