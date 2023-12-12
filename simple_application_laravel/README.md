@@ -73,3 +73,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 -   php artisan migrate:rollback --step=2 // 2 つ戻す
 -   php artisan migrate:refresh // ロールバックして再実行
 -   php artisan migrate:fresh // テーブル削除して再実行
+
+## validation of input field
+
+-   php artisan make:request {controller name}
