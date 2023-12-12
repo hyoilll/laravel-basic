@@ -82,3 +82,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 -   php artisan make:seeder {seeder name} // make seeder class
 -   php artisan migrate:fresh --seed // テーブル削除して再実行するけど、ダミーデータを挿入する
+-   php artisan make:factory {factory name} // 大量の dumydata を生成する時に使用
