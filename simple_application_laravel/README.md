@@ -85,3 +85,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 -   php artisan make:factory {factory name} // 大量の dumydata を生成する時に使用
 
 # config/app.php 設定ファイルに"'faker_locale' => 'ja_JP'"を追加することで、アプリケーションの Faker ロケールを設定できる
+
+## customization of pagination view
+
+-   php artisan vendor:publish --tag=laravel-pagination
