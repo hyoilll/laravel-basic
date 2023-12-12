@@ -77,3 +77,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## validation of input field
 
 -   php artisan make:request {controller name}
+
+## dumydata (seeder)
+
+-   php artisan make:seeder {seeder name} // make seeder class
+-   php artisan migrate:fresh --seed // テーブル削除して再実行するけど、ダミーデータを挿入する
