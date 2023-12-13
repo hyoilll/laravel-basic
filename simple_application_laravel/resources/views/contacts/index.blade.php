@@ -10,6 +10,10 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <a href="{{ route('contacts.create') }}" class="text-blue-500">新規登録</a>
+                    <form method="get" action="{{ route('contacts.index') }}">
+                        <input type="text" id="search" name="search" placeholder="search" class="text-black"/>
+                        <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick=searchHandler>search</button>
+                    </form>
                     <div class="flex flex-col text-center w-full mb-10">
                         <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-800 dark:text-gray-200">問い合わせ一覧</h1>
                     </div>
@@ -47,4 +51,18 @@
             </div>
         </div>
     </div>
+    <script>
+        const searchHandler = () => {
+            // const searchInput = document.querySelector("#search");
+
+            // if (searchInput.value.trim() === ""){
+            //     selectInput.disabled = true;
+            // }
+
+            "use strict"
+            if(confirm("本当に削除してよろしいでしょうか？")){
+                document.querySelector(`delete_${postId}`).submit()
+            }
+        }
+    </script>
 </x-app-layout>
